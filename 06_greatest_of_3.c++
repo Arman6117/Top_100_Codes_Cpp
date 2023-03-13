@@ -5,40 +5,44 @@ using namespace std;
 class Num
 {
 public:
-    int n1,n2;
+    int n1,n2,n3;
 
-    Num(int a, int b)
+    Num(int a, int b,int c)
     {
         n1 = a;
         n2 =b;
+        n3 =c;
     }
     
     void checkNum()
     {
-        if (n1 > n2)
+        if ((n1>n2)&&(n1>n3))
         {
             cout<<n1<<" is greatest";
         }
-        else if (n2>n1)
+        else if ((n2>n1)&&(n2>n3))
         {
           cout<<n2<<" is greatest";
         }
+        else if ((n3>n1)&&(n3>n2))
+        {
+             cout<<n3<<" is greatest";
+        }
         else
         {
-            cout<<"Both zero";
+            cout<<"Zero";
         }
-        
     }
 };
 
 int main()
 {
-    int num1 = 0,num2 = 0;
+    int num1 = 0,num2 = 0,num3;
 
-    cout<<"Enter 2 numbers:\n";
-    cin>>num1>>num2;
+    cout<<"Enter 3 numbers:\n";
+    cin>>num1>>num2>>num3;
     
-    Num obj(num1,num2);
+    Num obj(num1,num2,num3);
     obj.checkNum();
     return 0;
 }
