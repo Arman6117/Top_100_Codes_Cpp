@@ -25,7 +25,7 @@ void facto(int n)
     }
 
     cout<<"Factors of "<<n<<" are: ";
-    int factors = 1;
+    // int factors = 1;
     for (int i = 1; i <= n; i++)
     {
         if ( n % i == 0)
